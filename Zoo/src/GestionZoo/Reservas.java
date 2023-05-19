@@ -93,8 +93,6 @@ package GestionZoo;
 		
 			return getNumEntradas() + ";" + getNumGuias() + ";" + getDuracion() + ";" + getRecorrido() + ";" + mensajeEspectaculo() ;
 		}
-
-
 		
 	}
 
