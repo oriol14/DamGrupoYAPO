@@ -1,6 +1,6 @@
 package GestionZoo;
 
-	public class Reservas {
+	public class Reservas implements Precios {
 		
 
 		private int id;
@@ -83,14 +83,16 @@ package GestionZoo;
 			return (isEspectaculo()) ? "Espectaculos disponibles" : "Sin espectaculos disponibles";
 		}
 
+		@Override
+		public float calcPrecio() {
+			return numEntradas*(PRECIOENTRADA-PRECIOENTRADA*DESCUENTO);
+		}
 		
 
 		public String toFichero() {
 		
 			return getNumEntradas() + ";" + getNumGuias() + ";" + getDuracion() + ";" + getRecorrido() + ";" + mensajeEspectaculo() ;
 		}
-
-
 		
 	}
 
